@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+        pre{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .pop{
+            padding: 10px;
+        }
+        #confirmed{
+            color: blue;
+            font-size: 1.2em;
+        }
+        #dead{
+            color: red;
+            font-size: 1.2em;
+        }
+        #recovered{
+            color: green;
+            font-size: 1.2em;
+        }
+    </style>
+    <title>Corona Map</title>
+</head>
+<body>
+    <div id='map'></div>
+     
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXItc2FhYiIsImEiOiJja3F0bDZrc2owMDNhMnhwMnVncjA5aXYzIn0.pwz0iVELybn1tomYtg12zw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1,
+        center: [0,20]
+    });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
