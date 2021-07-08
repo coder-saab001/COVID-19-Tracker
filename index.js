@@ -13,6 +13,7 @@ function updateMap(){
             else color=0+(cases/100000)*170;
 
             const tex=`<div class="pop"><pre><h1>${element.location}</h1>
+            <img id="flag" src="https://www.countryflags.io/${element.country_code}/flat/48.png">
 <span id="confirmed">Confirmed: ${cases.toLocaleString()}</span>
 <span id="dead">Dead          : ${element.dead.toLocaleString()}</span>
 <span id="recovered">Recovered: ${element.recovered.toLocaleString()}</span></pre></div>`;
